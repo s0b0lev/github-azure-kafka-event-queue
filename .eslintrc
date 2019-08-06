@@ -1,0 +1,8 @@
+{
+    "extends": ["airbnb/base", "import/warnings"],
+    "parser": "babel-eslint",
+    "plugins": ["modules", "import"],
+    "rules": {
+        "strict": 0
+    }
+}
