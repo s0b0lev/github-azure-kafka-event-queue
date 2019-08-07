@@ -1,18 +1,19 @@
 import logger from '../../common/logger';
+import schemas from './schemas/github';
+import kafka from '../senders';
+
 
 const githubEventReciever = (req, res) => {
-  const { issue, body, labels } = req.body;
+  const messageBody = schemas.extract(req.body);
 
-  const parsedIssue = {
-    id: issue.id,
-    url: issue.html_url,
-    title: issue.title,
-    body,
-    labels,
+  const message = {
+    originator: 'github',
+    data: messageBody,
   };
 
-  logger.info(`[Github Event] id: ${parsedIssue.id} title: ${parsedIssue.title}`);
+  logger.info(`[Github Event] id: ${messageBody.id} title: ${messageBody.title}`);
 
+  kafka(message);
   res.send('ok');
 };
 

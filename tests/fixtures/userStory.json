@@ -1,0 +1,98 @@
+{
+    "subscriptionId": "e9d15874-4188-4382-9711-946e34aaabc2",
+    "notificationId": 8,
+    "id": "fdae53f9-0d20-4ec5-84c4-3cb1814f026a",
+    "eventType": "workitem.created",
+    "publisherId": "tfs",
+    "message": {
+        "text": "User Story #12 (ÑÑÐ²Ð°ÑÑÐ²Ð°) created by Aleksandr Sobolev\r\n(https://dev.azure.com/thesobolev/web/wi.aspx?pcguid=54df08d2-a2ef-4b8d-ab3c-f14015cd34dd&id=12)",
+        "html": "<a href=\"https://dev.azure.com/thesobolev/web/wi.aspx?pcguid=54df08d2-a2ef-4b8d-ab3c-f14015cd34dd&amp;id=12\">User Story #12</a> (ÑÑÐ²Ð°ÑÑÐ²Ð°) created by Aleksandr Sobolev",
+        "markdown": "[User Story #12](https://dev.azure.com/thesobolev/web/wi.aspx?pcguid=54df08d2-a2ef-4b8d-ab3c-f14015cd34dd&id=12) (ÑÑÐ²Ð°ÑÑÐ²Ð°) created by Aleksandr Sobolev"
+    },
+    "detailedMessage": {
+        "text": "User Story #12 (ÑÑÐ²Ð°ÑÑÐ²Ð°) created by Aleksandr Sobolev\r\n(https://dev.azure.com/thesobolev/web/wi.aspx?pcguid=54df08d2-a2ef-4b8d-ab3c-f14015cd34dd&id=12)\r\n\r\n- Area: thesobolev\r\n- Iteration: thesobolev\r\n- State: New\r\n",
+        "html": "<a href=\"https://dev.azure.com/thesobolev/web/wi.aspx?pcguid=54df08d2-a2ef-4b8d-ab3c-f14015cd34dd&amp;id=12\">User Story #12</a> (ÑÑÐ²Ð°ÑÑÐ²Ð°) created by Aleksandr Sobolev<ul>\r\n<li>Area: thesobolev</li>\r\n<li>Iteration: thesobolev</li>\r\n<li>State: New</li></ul>",
+        "markdown": "[User Story #12](https://dev.azure.com/thesobolev/web/wi.aspx?pcguid=54df08d2-a2ef-4b8d-ab3c-f14015cd34dd&id=12) (ÑÑÐ²Ð°ÑÑÐ²Ð°) created by Aleksandr Sobolev\r\n\r\n* Area: thesobolev\r\n* Iteration: thesobolev\r\n* State: New\r\n"
+    },
+    "resource": {
+        "id": 12,
+        "rev": 1,
+        "fields": {
+            "System.AreaPath": "thesobolev",
+            "System.TeamProject": "thesobolev",
+            "System.IterationPath": "thesobolev",
+            "System.WorkItemType": "User Story",
+            "System.State": "New",
+            "System.Reason": "New",
+            "System.CreatedDate": "2019-08-07T06:59:48.23Z",
+            "System.CreatedBy": "Aleksandr Sobolev <thesobolev@gmail.com>",
+            "System.ChangedDate": "2019-08-07T06:59:48.23Z",
+            "System.ChangedBy": "Aleksandr Sobolev <thesobolev@gmail.com>",
+            "System.CommentCount": 0,
+            "System.Title": "ÑÑÐ²Ð°ÑÑÐ²Ð°",
+            "Microsoft.VSTS.Common.StateChangeDate": "2019-08-07T06:59:48.23Z",
+            "Microsoft.VSTS.Common.Priority": 2,
+            "Microsoft.VSTS.Common.ValueArea": "Business",
+            "System.Description": "<div>ÑÑÐ²Ð°</div>",
+            "Microsoft.VSTS.Common.AcceptanceCriteria": "<div>ÑÑÐ²Ð°</div>"
+        },
+        "relations": [
+            {
+                "rel": "System.LinkTypes.Hierarchy-Forward",
+                "url": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/1",
+                "attributes": {
+                    "isLocked": false,
+                    "name": "Child"
+                }
+            },
+            {
+                "rel": "System.LinkTypes.Hierarchy-Forward",
+                "url": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/2",
+                "attributes": {
+                    "isLocked": false,
+                    "name": "Child"
+                }
+            }
+        ],
+        "_links": {
+            "self": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/12"
+            },
+            "workItemUpdates": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/12/updates"
+            },
+            "workItemRevisions": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/12/revisions"
+            },
+            "workItemComments": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/12/comments"
+            },
+            "html": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_workitems/edit/12"
+            },
+            "workItemType": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItemTypes/User%20Story"
+            },
+            "fields": {
+                "href": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/fields"
+            }
+        },
+        "url": "https://dev.azure.com/thesobolev/af81706f-93db-49a7-86c4-a4bde1ee40b1/_apis/wit/workItems/12"
+    },
+    "resourceVersion": "1.0",
+    "resourceContainers": {
+        "collection": {
+            "id": "54df08d2-a2ef-4b8d-ab3c-f14015cd34dd",
+            "baseUrl": "https://dev.azure.com/thesobolev/"
+        },
+        "account": {
+            "id": "3e585eba-cd5d-462a-8fb5-5fdfb372a4a7",
+            "baseUrl": "https://dev.azure.com/thesobolev/"
+        },
+        "project": {
+            "id": "af81706f-93db-49a7-86c4-a4bde1ee40b1",
+            "baseUrl": "https://dev.azure.com/thesobolev/"
+        }
+    },
+    "createdDate": "2019-08-07T06:59:55.4550522Z"
+}
