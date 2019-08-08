@@ -11,19 +11,14 @@ const getParentId = (relations) => {
 };
 
 
-const extract = (body) => {
-  const { resource: { fields, relations }, id } = body;
-
-
-  return {
-    id,
-    title: _.get(fields, '["System.Title"]'),
-    description: _.get(fields, '["System.Description"]'),
-    acceptanceCriteria: _.get(fields, '["Microsoft.VSTS.Common.AcceptanceCriteria"]'),
-    url: _.get(body, 'resource._links.html.href'),
-    type: _.get(fields, '["System.WorkItemType"]'),
-    parentId: getParentId(relations),
-  };
-};
+const extract = ({ resource: { fields, relations, _links }, id }) => ({
+  id,
+  title: _.get(fields, '["System.Title"]'),
+  description: _.get(fields, '["System.Description"]'),
+  acceptanceCriteria: _.get(fields, '["Microsoft.VSTS.Common.AcceptanceCriteria"]'),
+  url: _.get(_links, 'html.href'),
+  type: _.get(fields, '["System.WorkItemType"]'),
+  parentId: getParentId(relations),
+});
 
 export default { extract };

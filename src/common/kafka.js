@@ -6,13 +6,10 @@ const kafka = new Kafka({
 });
 const producer = kafka.producer();
 
-
-const prepareMessage = message => [{ value: JSON.stringify(message) }];
-
 export default async (message) => {
   await producer.connect();
   await producer.send({
     topic: 'github-azure-sync',
-    messages: prepareMessage(message),
+    messages: [{ value: JSON.stringify(message) }],
   });
 };
