@@ -5,14 +5,15 @@ import _ from 'lodash';
 import config from '../config';
 import logger from './common/logger';
 
-import events from './events';
+import receivers from './receivers';
 
 const app = express();
+
 app.set('port', config.PORT);
 
 app.use(express.json());
 
-app.use('/api/events', events);
+app.use('/api/events', receivers);
 
 
 app.use((err, req, res, next) => {

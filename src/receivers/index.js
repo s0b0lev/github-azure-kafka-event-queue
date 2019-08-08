@@ -1,7 +1,7 @@
 import express from 'express';
 
-import github from './receivers/github';
-import azure from './receivers/azure';
+import github from './github';
+import azure from './azure';
 
 const router = express.Router();
 
