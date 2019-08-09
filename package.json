@@ -15,7 +15,8 @@
     "kafka-node": "^4.1.3",
     "kafkajs": "^1.10.0",
     "lodash": "^4.17.15",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -32,7 +33,7 @@
     "mocha": "^6.2.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./tests --recursive --require @babel/register",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha ./tests --recursive --require @babel/register",
     "dev": "NODE_ENV=test nodemon --exec 'node -r @babel/register src/server | bunyan -o short -l trace'",
     "start": "NODE_ENV=production node -r @babel/register src/server",
     "lint": "./node_modules/.bin/eslint .",

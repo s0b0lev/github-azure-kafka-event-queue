@@ -8,8 +8,8 @@ const getParentId = (relations) => {
 };
 
 
-const extract = ({ resource, id }) => ({
-  id,
+const extract = ({ resource }) => ({
+  id: resource.id,
   title: _.get(resource, 'fields.["System.Title"]'),
   description: _.get(resource, 'fields.["System.Description"]'),
   acceptanceCriteria: _.get(resource, 'fields.["Microsoft.VSTS.Common.AcceptanceCriteria"]'),
@@ -18,11 +18,36 @@ const extract = ({ resource, id }) => ({
   parentId: resource.relations && getParentId(resource.relations),
 });
 
+const extractComment = ({ resource }) => ({
+  id: resource.id,
+  workitemId: resource.id,
+  title: _.get(resource, 'fields.["System.Title"]'),
+  comment: _.get(resource, 'fields.["System.History"]'),
+  url: _.get(resource, '_links.html.href'),
+  parentId: resource.relations && getParentId(resource.relations),
+});
+
+
+const supportedEventTypes = [
+  'workitem.updated',
+  'workitem.created',
+  'workitem.deleted',
+  'workitem.restored',
+  'workitem.updated',
+];
 
 export default (req, res) => {
-  const messageBody = extract(req.body);
-  logger.info(`[Azure Event] id: ${messageBody.id} title: ${messageBody.title}`);
+  const { eventType } = req.body;
+  let data = {};
 
-  kafka({ originator: 'azure', data: messageBody });
+  if (eventType === 'workitem.commented') {
+    data = extractComment(req.body);
+  } else if (supportedEventTypes.includes(eventType)) {
+    data = extract(req.body);
+  }
+
+  logger.info(`[Azure Event] id: ${data.id} title: ${data.title}`);
+
+  kafka({ originator: 'azure', data });
   res.send('ok');
 };

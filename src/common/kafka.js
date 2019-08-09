@@ -1,8 +1,9 @@
 import { Kafka } from 'kafkajs';
+import config from '../../config';
 
 const kafka = new Kafka({
-  clientId: 'syncer',
-  brokers: ['127.0.0.1:9092'],
+  clientId: config.KAFKA_CLIENTID,
+  brokers: config.KAFKA_BROKERS,
 });
 const producer = kafka.producer();
 
